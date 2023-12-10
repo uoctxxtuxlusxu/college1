@@ -1,0 +1,103 @@
+
+.wrapper {
+    display: grid;
+    place-items: center;
+  }
+
+  
+  .typing-demo {
+    width: 175ch;
+    animation: typing 15s steps(175) infinite,blink .3s step-end infinite alternate;
+    white-space: nowrap;
+    border-right: 3px solid;
+    overflow: hidden; 
+   
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+  
+  .typing-dem center H5 {
+    width: 20ch;
+    animation: typing 2s steps(20) ,blink .3s step-end infinite alternate;
+    white-space: nowrap;
+    border-right: 3px solid;
+    overflow: hidden; 
+   
+  }
+
+
+  
+  :root {
+    --images: 3;
+    --divHeight: 87vh;
+    --divTopPadding: 1.5em;
+    --divMargin: 4vw;
+  }
+  
+  .container {
+    margin: 0 auto;
+  }
+  
+  .ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--images), var(--divHeight));
+    gap: var(--divMargin);
+    padding-bottom: calc(var(--images) * var(--divTopPadding));
+    margin-bottom: var(--divMargin);
+  }
+  
+  .ul li {
+    position: sticky;
+    top: 0;
+    padding-top: calc(var(--index) * var(--divTopPadding));
+  }
+  
+  .ul> li >div {
+    box-sizing: border-box;
+    height: var(--divHeight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+  }
+  
+  .ul> li> div> img {
+    width: 80%;
+    height: auto;
+    box-shadow: 0 0 calc(.5625*5vw);
+    border-radius: calc(.5625*2vw);
+  }
+  
+  #img1 {
+    --index: 1;
+  }
+  
+  #img2 {
+    --index: 2;
+  }
+  
+  #img3 {
+    --index: 3;
+  } 
+  
+  #img4 {
+    --index: 4;
+  }
+  
+  #img5 {
+    --index: 5;
+  }
